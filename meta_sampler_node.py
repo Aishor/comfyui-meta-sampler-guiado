@@ -38,7 +38,7 @@ class MetaSamplerGuiado:
     RETURN_NAMES = ("latent_video_outpainting",)
     FUNCTION = "sample"
 
-    CATEGORY = "sampling"
+    CATEGORY = "sampling/meta-sampler-guiado"
 
     def sample(self, model, seed, steps, cfg, positive, negative, video_original, video_latente_guia, mascara, sampler_name, scheduler, denoise=1.0, VAE_WAN=None, feather_mask_pixels=5):
         # Implementación completa del Meta-Sampler Guiado
@@ -244,7 +244,13 @@ class MetaSamplerGuiado:
         Agrega la cantidad apropiada de ruido al latente guía para que coincida
         con el nivel de ruido del paso actual del muestreo
         """
-        import numpy as np
+        # Importar numpy dentro del bloque try para evitar problemas de importación
+        try:
+            import numpy as np
+        except ImportError:
+            # Si no se puede importar numpy, usar una implementación alternativa
+            # En este caso, simplemente retornar el latente guía sin ruido adicional
+            return latente_guia
         
         # Implementación para agregar ruido al latente guía basado en el timestep
         try:
