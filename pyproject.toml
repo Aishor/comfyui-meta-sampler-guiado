@@ -1,0 +1,19 @@
+{
+    "title": "Meta-Sampler Guiado (Seed-WAN)",
+    "description": "Nodo personalizado para ComfyUI que implementa el Meta-Sampler Guiado para outpainting de video",
+    "version": "1.0.0",
+    "author": "ComfyUI Community",
+    "license": "MIT",
+    "dependencies": [
+        "comfyui"
+    ],
+    "tags": [
+        "sampling",
+        "video",
+        "outpainting",
+        "inpainting",
+        "temporal coherence",
+        "wan",
+        "seedvr2"
+    ]
+}

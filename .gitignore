@@ -1,0 +1,43 @@
+# Archivos temporales del sistema
+*.tmp
+*.temp
+*.log
+.DS_Store
+Thumbs.db
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Archivos generados por editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Datos sensibles
+*.key
+*.pem
+*.crt
+*.cert
+config.json
+secrets.json
+
+# Otros
+node_modules/
+dist/
+build/
+*.zip
+*.rar
+*.7z
